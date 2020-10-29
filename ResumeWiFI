@@ -20,4 +20,5 @@ dir: /lib/systemd/system-sleep/{fileName}
 exe: chmod +x /lib/systemd/system-sleep/{fileName}
 src: https://askubuntu.com/questions/1029250/ubuntu-18-04-ethernet-disconnected-after-suspend
 verify: grep {fileName} /var/log/syslog
+manual: sudo modprobe -a --force 8821ce /lib/modules/$Kernel_version/kernel/drivers/
 '
